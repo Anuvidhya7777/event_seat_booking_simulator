@@ -41,3 +41,26 @@ event-seat-booking-simulator/
 ├── style.css
 ├── script.js
 └── README.md
+```
+
+## What Was Implemented
+
+### HTML
+- Created a simple user interface with inputs to accept the number of rows and columns
+- Added a button to trigger seat generation
+- Included a container element to dynamically display the generated seats
+- Linked external CSS and JavaScript files for separation of concerns
+
+### CSS
+- Applied basic styling for readability and spacing
+- Used CSS Grid to arrange seats dynamically based on column count
+- Styled each seat with fixed dimensions, background color, and centered text
+- Added cursor interaction and rounded corners for a clean UI feel
+
+### JavaScript
+- Added an event listener to handle the "Generate Seats" button click
+- Read row and column values from user input fields
+- Dynamically created seat elements using DOM manipulation
+- Generated seat labels programmatically (A1, A2, B1, B2, etc.)
+- Updated the grid layout dynamically using `gridTemplateColumns`
+- Cleared previous seat layouts before generating a new one
