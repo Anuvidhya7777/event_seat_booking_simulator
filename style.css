@@ -24,3 +24,8 @@ body {
     cursor: pointer;
     border-radius: 4px;
 }
+
+.seat.booked {
+    background-color: #f44336;
+    cursor: not-allowed;
+}
