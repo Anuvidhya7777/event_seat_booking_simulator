@@ -15,4 +15,9 @@ document.getElementById("generate").addEventListener("click", () => {
             container.appendChild(seat);
         }
     }
+
+    seat.addEventListener("click", () => {
+    seat.classList.toggle("booked");
+});
+
 });
