@@ -17,7 +17,12 @@ document.getElementById("generate").addEventListener("click", () => {
     }
 
     seat.addEventListener("click", () => {
-    seat.classList.toggle("booked");
+        if (seat.classList.contains("booked")) {
+        return; // already booked, stop action
+    }
+    seat.classList.add("booked");
+
+
 });
 
 });
