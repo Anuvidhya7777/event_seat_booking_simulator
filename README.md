@@ -20,6 +20,7 @@
 - Interactive seat selection
 - Visual indication of available and booked seats
 - Prevention of double booking
+- live booked seat count display
 - Simple and user-friendly interface
 
 ---
@@ -64,3 +65,24 @@ event-seat-booking-simulator/
 - Generated seat labels programmatically (A1, A2, B1, B2, etc.)
 - Updated the grid layout dynamically using `gridTemplateColumns`
 - Cleared previous seat layouts before generating a new one
+- Implemented seat booking logic using class-based state management
+- Prevented multiple bookings of the same seat
+- Maintained and displayed a live count of booked seats
+
+## How to Use
+
+1. Enter the number of rows
+2. Enter the number of columns
+3. Click the **Generate Seats** button
+4. Click on a seat to book it
+5. Booked seats are visually highlighted and locked
+6. The total number of booked seats is displayed live
+
+
+
+## Project Status
+
+🚧 In Active Development
+
+This project is being developed incrementally with daily commits,
+focusing on clean code, real-world logic, and progressive enhancements.
