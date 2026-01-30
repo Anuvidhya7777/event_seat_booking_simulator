@@ -15,12 +15,15 @@ document.getElementById("generate").addEventListener("click", () => {
             container.appendChild(seat);
         }
     }
-
+    let bookedCount = 0;
     seat.addEventListener("click", () => {
         if (seat.classList.contains("booked")) {
         return; // already booked, stop action
     }
     seat.classList.add("booked");
+    bookedCount++;
+    document.getElementById("count").textContent = `Booked Seats: ${bookedCount}`;
+
 
 
 });
