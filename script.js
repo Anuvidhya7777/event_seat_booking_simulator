@@ -5,6 +5,9 @@ document.getElementById("generate").addEventListener("click", () => {
     const container = document.getElementById("seat-container");
     container.innerHTML = "";
 
+    let bookedCount = 0;
+    document.getElementById("count").textContent = "Booked Seats: 0";
+
     container.style.gridTemplateColumns = `repeat(${cols}, 40px)`;
 
     for (let r = 0; r < rows; r++) {
@@ -12,20 +15,27 @@ document.getElementById("generate").addEventListener("click", () => {
             const seat = document.createElement("div");
             seat.className = "seat";
             seat.textContent = String.fromCharCode(65 + r) + c;
+
+            // 👇 THIS WAS MISSING
+            seat.addEventListener("click", () => {
+                if (seat.classList.contains("booked")) return;
+                seat.classList.toggle("selected");
+            });
+
             container.appendChild(seat);
         }
     }
-    let bookedCount = 0;
-    seat.addEventListener("click", () => {
-        if (seat.classList.contains("booked")) {
-        return; // already booked, stop action
-    }
-    seat.classList.add("booked");
-    bookedCount++;
-    document.getElementById("count").textContent = `Booked Seats: ${bookedCount}`;
 
+    document.getElementById("confirm").onclick = () => {
+        const selectedSeats = document.querySelectorAll(".seat.selected");
 
+        selectedSeats.forEach(seat => {
+            seat.classList.remove("selected");
+            seat.classList.add("booked");
+            bookedCount++;
+        });
 
-});
-
+        document.getElementById("count").textContent =
+            `Booked Seats: ${bookedCount}`;
+    };
 });
