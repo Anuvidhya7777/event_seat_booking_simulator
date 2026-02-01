@@ -1,16 +1,52 @@
 body {
     font-family: Arial, sans-serif;
-    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: max-content;
+}
+
+.booking-area {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .controls {
-    margin-bottom: 20px;
+     display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
 #seat-container {
     display: grid;
     gap: 10px;
     margin-top: 20px;
+    justify-content: start;
+}
+.controls label {
+    font-weight: 600;
+}
+
+.controls input {
+    width: 60px;
+    padding: 5px;
 }
 
 .seat {
@@ -33,4 +69,24 @@ body {
 
 .seat.selected {
     background-color: #ff9800; /* orange */
+}
+
+.seat:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+
+button {
+    padding: 8px 16px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #125aa0;
 }
