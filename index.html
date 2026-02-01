@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Event Seat Booking Simulator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+<div class="app">
     <h1>Event Seat Booking Simulation</h1>
 
     <div class="controls">
@@ -25,11 +17,18 @@
 
     <p id="count">Booked Seats: 0</p>
 
+    <!-- NEW WRAPPER -->
+    <div class="booking-area">
+        <div id="seat-container"></div>
 
-    <div id="seat-container"></div>
-    <button id="confirm">Confirm Booking</button>
+        <div class="side-panel">
+            <button id="confirm">Confirm Booking</button>
 
-
-    <script src="script.js"></script>
-</body>
-</html>
+            <div class="legend">
+                <div><span class="seat available"></span> Available</div>
+                <div><span class="seat selected"></span> Selected</div>
+                <div><span class="seat booked"></span> Booked</div>
+            </div>
+        </div>
+    </div>
+</div>
