@@ -5,10 +5,12 @@ document.getElementById("generate").addEventListener("click", () => {
     const container = document.getElementById("seat-container");
     container.innerHTML = "";
 
+    container.style.gridTemplateColumns = `repeat(${cols}, 40px)`;
+
     let bookedCount = 0;
     document.getElementById("count").textContent = "Booked Seats: 0";
 
-    container.style.gridTemplateColumns = `repeat(${cols}, 40px)`;
+
 
     for (let r = 0; r < rows; r++) {
         for (let c = 1; c <= cols; c++) {
@@ -34,7 +36,7 @@ document.getElementById("generate").addEventListener("click", () => {
             seat.classList.add("booked");
             bookedCount++;
         });
-
+         bookedCount += selectedSeats.length;
         document.getElementById("count").textContent =
             `Booked Seats: ${bookedCount}`;
     };
